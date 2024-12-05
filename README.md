@@ -41,10 +41,33 @@ The other dataset we use is from `Box Office Mojo` which contains data on a movi
 
 In sum, we will investigate the relationship between `Genre` and `Average Rating`, `Average Total Gross`, and `Average Vote Count` to get a well-rounded picture of which genres of movies are the safest to invest in.
 
-## Data Visualizations & Results
-After cleaning the data to exclude outliers, we are able to gain the following insights. We will be brief here and share the most important insights, but for a more thorough breakdown of the visualizations please see the Jupyter Notebook
+#### Limitations
+**We did not look at closer data such as budget, director, cast.**
+Though these factors could be useful in determining which directors are more likely to create a successful movie, which actors are more likely to draw audiences, and how much of a budget could be expected to produce a hit movie, in reality these factors are more difficult to account for and too unreliable (for example, it's not a guarantee that a certain budget can be acquired, or that desired directors or actors could be secured).
 
-The genres present in the poorest performing genres but absent from the highest performing:
+Since these factors lie largely outside the realm of our control, it's better to look at which types of movies perform well before considering details such as cast and director.
+
+**We did not factor in longevity or demand on streaming.**
+Unfortunately, streaming services tend to be generally tight-lipped about the performance of the products on their platforms. However, we can reasonably assume that movies that perform well at the box office and also garner a wide audience would be sought after by streaming platforms.
+
+**We did not look at role of discourse, social media buzz, word of mouth, etc.**
+As these matters are largely outside the realm of our inquiry, and more difficult to ascertain to a definitive degree as opposed to hard numbers such as gross and critical reception, we were unable to factor these into our assessment, though we can also reasonably assume that movies that perform well and are widely viewed would correlate to higher degrees of online discourse and social media buzz.
+
+Despite these limitations, we have been able to identify **which genres tend to perform the best at the box office, attract the widest audience, and are best received on average by audiences and critics,** which will be outlined in our recommendations below.
+
+## Data Visualizations & Results
+After cleaning the data to exclude outliers, we are able to gain the following insights. We will be brief here and share the most important insights, but for a more thorough breakdown of the visualizations please see the [Jupyter Notebook](https://github.com/momopajamas/Phase-2-Project-Movie-Analysis/blob/main/Movie%20Analysis.ipynb).
+
+![top10_bottom10_rating_vote](https://github.com/user-attachments/assets/4c2bc387-2257-4a45-9cee-a93f35485058)
+Here's what we can tell from this:
+- There is a wide margin of difference between average vote count of both Top 10 and Bottom 10 movies.
+- While `Western` movies have the highest average vote count by far, their critical reception is not much different from other genres.
+- `Sci-Fi` movies have high average vote count, but are not present in the Top 10 for average rating.
+- `News` and `Documentary` movies have starkly lower average vote counts than any other genre in the Bottom 10.
+- `Horror` movies have the lowest average rating in the Bottom 10 and are not present in the Top 10.
+
+![average_gross_by_genre](https://github.com/user-attachments/assets/a7e0a01e-b00f-4daf-ad0c-600e6c05e237)
+**The genres present in the poorest performing genres but absent from the highest performing:**
 
 `Documentary`
 `War`
@@ -55,7 +78,7 @@ The genres present in the poorest performing genres but absent from the highest 
 `Biography`
 `Drama`
 
-Genres that are present in highest performing genres of both Top 25% and Bottom 75%:
+**Genres that are present in highest performing genres of both Top 25% and Bottom 75%:**
 
 `Animation`
 `Adventure`
@@ -67,6 +90,37 @@ Genres that are present in highest performing genres of both Top 25% and Bottom 
 `Comedy`
 `Thriller`
 
-![average_gross_by_genre](https://github.com/user-attachments/assets/a7e0a01e-b00f-4daf-ad0c-600e6c05e237)
 
+The analysis we conducted gave us three different lists:
 
+1. Highest Grossing Genres
+2. Genres with the Highest Ratings
+3. Genres with the Highest Vote Counts
+
+Since we want to see which films perform the best across these categories, let's see which genres overlap across all three:
+<img width="563" alt="highest_gross_vote_rating_table" src="https://github.com/user-attachments/assets/e797d090-fc2a-4f15-84c9-6e06d7815684">
+
+It is interesting to note that `Animation` is the only genre that overlaps across all three of those list of metrics, indicating it is the only genre that is among the highest grossing, highets rated, and has the highest vote count.
+
+## Recommendations
+Based on the insights gained from the analysis above, where we looked at which genres of movies had the highest vote counts on IMDB, the highest ratings, and the highest gross, as well as which genres generally had poor records in those three categories, we're able to confidently provide three recommendations. Despite the limitations outlined, these recommendations are strong starting points to consider before moving into the details around budget, cast, director, etc.
+
+1. We can confidently recommend investing in Animation as a genre that is most likely to draw large audiences, perform well in theaters, and be well-received by audiences and critics.
+
+2. We recommend investing in some combination of 2-3 of the following genres, or combining 1-2 of the following genres with Animation:
+  - `Adventure`
+  - `Sci-Fi`
+  - `Musical`
+  - `Family`
+  - `Action`
+  - `Fantasy`
+  - `Comedy`
+  - `Thriller`
+3. We recommend avoiding investment in the following genres which the analysis showed to be more risky:
+  - `Documentary`
+  - `War`
+  - `News`
+  - `Crime`
+  - `Romance`
+  - `Biography`
+  - `Horror`
