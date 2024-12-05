@@ -42,4 +42,31 @@ The other dataset we use is from `Box Office Mojo` which contains data on a movi
 In sum, we will investigate the relationship between `Genre` and `Average Rating`, `Average Total Gross`, and `Average Vote Count` to get a well-rounded picture of which genres of movies are the safest to invest in.
 
 ## Data Visualizations & Results
-After cleaning the data to exclude outliers, we are able to gain the following insights:
+After cleaning the data to exclude outliers, we are able to gain the following insights. We will be brief here and share the most important insights, but for a more thorough breakdown of the visualizations please see the Jupyter Notebook
+
+The genres present in the poorest performing genres but absent from the highest performing:
+
+`Documentary`
+`War`
+`News`
+`Crime`
+`Romance`
+`Mystery`
+`Biography`
+`Drama`
+
+Genres that are present in highest performing genres of both Top 25% and Bottom 75%:
+
+`Animation`
+`Adventure`
+`Sci-Fi`
+`Musical`
+`Family`
+`Action`
+`Fantasy`
+`Comedy`
+`Thriller`
+
+![average_gross_by_genre](https://github.com/user-attachments/assets/a7e0a01e-b00f-4daf-ad0c-600e6c05e237)
+
+
