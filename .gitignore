@@ -1,5 +1,6 @@
 # Data
-Data/
+Data/bom.movie_gross.csv.gz
+Data/im.db
 
 # Junk
 .DS_Store
